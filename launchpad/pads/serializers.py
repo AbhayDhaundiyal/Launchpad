@@ -5,4 +5,4 @@ from .models import pads
 class padSerializer(serializers.ModelSerializer):
     class Meta:
         model = pads
-        fields = ('pad_id', 'owner', 'active', 'active_since')
+        fields = ('pad_id', 'owner', 'active', 'active_since', 'For')

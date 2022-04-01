@@ -5,6 +5,7 @@ class pads(models.Model):
     owner = models.CharField(max_length= 20, default="None")
     active = models.BooleanField(default = True)
     active_since = models.DateTimeField()
+    For = models.IntegerField(default=0)
 
     def __str__(self):
         return self.owner

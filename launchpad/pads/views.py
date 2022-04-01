@@ -23,12 +23,13 @@ def show_one(request, id):
         print(jsondata)
         return HttpResponse(jsondata)
 
-def book(request, id):
+def book(request, id, days):
     if request.method == 'GET':
         query = pads.objects.get(pk = id)
         if query.active == True:
             query.active = False
             query.active_since = datetime.now()
+            query.For = days
             query.save()
             return HttpResponse("Sucess")
         else:

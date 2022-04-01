@@ -132,5 +132,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 CRONJOBS = [
-    ('*/1 * * * *', 'pads.cron.myjob')
+    ('* * */1 * *', 'pads.cron.myjob')
 ]

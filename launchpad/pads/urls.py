@@ -7,5 +7,5 @@ app_name = 'login'
 urlpatterns =[
     path('show/', views.show, name = 'show'),
     path('show/<int:id>/', views.show_one, name = 'show_one'),
-    path('book/<int:id>/', views.book, name = 'book'),
+    path('book/<int:id>/<int:days>/', views.book, name = 'book'),
 ]
